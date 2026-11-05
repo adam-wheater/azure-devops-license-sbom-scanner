@@ -1,0 +1,51 @@
+[
+  {
+    "name": "overview",
+    "steps": [
+      { "wait": 800 },
+      { "click": "role=button[name=/Scan All Repos/]" },
+      { "waitFor": "text=Scanned 10 repos" }
+    ]
+  },
+  {
+    "name": "dependencies",
+    "width": 1440,
+    "height": 1000,
+    "steps": [
+      { "wait": 800 },
+      { "click": "role=button[name=/Scan All Repos/]" },
+      { "waitFor": "text=Scanned 10 repos" },
+      { "click": "role=tab[name=/Dependencies/]" },
+      { "click": "role=button[name=/^payments-worker/]" },
+      { "wait": 300 }
+    ]
+  },
+  {
+    "name": "violations",
+    "steps": [
+      { "wait": 800 },
+      { "click": "role=button[name=/Scan All Repos/]" },
+      { "waitFor": "text=Scanned 10 repos" },
+      { "click": "role=tab[name=/Violations/]" },
+      { "wait": 300 }
+    ],
+    "fullPage": true
+  },
+  {
+    "name": "sbom",
+    "steps": [
+      { "wait": 800 },
+      { "click": "role=button[name=/Scan All Repos/]" },
+      { "waitFor": "text=Scanned 10 repos" },
+      { "click": "role=tab[name=/SBOM/]" },
+      { "click": "role=button[name=/Preview/] >> nth=0" },
+      { "wait": 300 }
+    ],
+    "fullPage": true
+  },
+  {
+    "name": "settings",
+    "steps": [{ "click": "role=tab[name=/Settings/]" }, { "wait": 500 }],
+    "fullPage": true
+  }
+]
